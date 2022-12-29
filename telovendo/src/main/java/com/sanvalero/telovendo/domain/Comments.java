@@ -18,15 +18,15 @@ public class Comments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
     private long id;
-    @Column//columna de la tabla
+    @Column(name = "comment_text")//columna de la tabla
     private String commentText;
-    @Column
+    @Column(name = "buyer_name")//se cambia el nombre adecuandolo para bbdd
     private String buyerName;
-    @Column
+    @Column(name = "seller_name")
     private String sellerName;
-    @Column
+    @Column(name = "date_comment")
     private Date dateComment;
-    @Column
+    @Column(name = "star_rate")
     private int starRate;
 
 }

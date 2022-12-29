@@ -19,11 +19,11 @@ public class Products {
     private long id;
     @Column//columna de la tabla
     private String name;
-    @Column
+    @Column(name = "release_date")//se cambia el nombre adecuandolo para bbdd
     private LocalTime releaseDate;
     @Column
     private float price;
-    @Column
+    @Column(name = "on_sale")
     private boolean onSale;
     @Column
     private String currency;

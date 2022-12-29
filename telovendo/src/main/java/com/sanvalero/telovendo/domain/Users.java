@@ -24,11 +24,11 @@ public class Users {
     private String surname;
     @Column
     private boolean age18;
-    @Column
+    @Column(name = "nick_name")//se cambia el nombre adecuandolo para bbdd
     private String nickName;
     @Column
     private String password;
-    @Column
+    @Column(name = "born_date")
     private Date bornDate;
 
 }

@@ -22,10 +22,10 @@ public class BuyLists {
     private String name;
     @Column
     private float total;
-    @Column
+    @Column(name = "number_products")//se cambia el nombre adecuandolo para bbdd
     private int numberProducts;
-    @Column
+    @Column(name = "public_list")
     private boolean publicList;
-    @Column
+    @Column(name = "create_date")
     private Date createDate;
 }
