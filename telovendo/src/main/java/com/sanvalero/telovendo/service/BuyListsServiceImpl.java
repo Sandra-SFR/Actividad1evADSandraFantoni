@@ -11,7 +11,7 @@ import java.util.List;
 public class BuyListsServiceImpl implements BuyListsService{
 
     @Autowired//Autoconexion con el repositorio
-    BuyListsRepository buyListsRepository;
+    private BuyListsRepository buyListsRepository;
 
     @Override
     public List<BuyLists> findAll(){

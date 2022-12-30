@@ -13,7 +13,7 @@ import java.util.List;
 public class BuyListsController {
 
     @Autowired
-    BuyListsService buyListsService;
+    private BuyListsService buyListsService;
 
     @GetMapping("/telovendo")//bbdd
     public List<BuyLists> getBuses() {
