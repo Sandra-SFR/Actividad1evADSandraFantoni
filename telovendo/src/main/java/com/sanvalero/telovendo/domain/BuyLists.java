@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 
-@Data //lombok (para tener todos los getters y setters sin verlos)
+@Data //lombok para tener todos los getters y setters sin verlos
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
@@ -19,7 +19,7 @@ public class BuyLists {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
     private long id;
     @Column//columna de la tabla
-    private String name;
+    private String code;
     @Column
     private float total;
     @Column(name = "number_products")//se cambia el nombre adecuandolo para bbdd
