@@ -16,7 +16,7 @@ public class BuyListsController {
     private BuyListsService buyListsService;
 
     @GetMapping("/telovendo")//bbdd
-    public List<BuyLists> getBuses() {
+    public List<BuyLists> getTelovendo() {
         return buyListsService.findAll();
     }
 }
