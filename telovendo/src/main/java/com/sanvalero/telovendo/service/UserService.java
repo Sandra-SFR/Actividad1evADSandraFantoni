@@ -1,4 +1,4 @@
 package com.sanvalero.telovendo.service;
 
-public interface UsersService {
+public interface UserService {
 }

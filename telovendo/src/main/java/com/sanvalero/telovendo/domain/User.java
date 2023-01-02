@@ -12,8 +12,8 @@ import java.util.Date;
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
-@Entity(name = "users")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
-public class Users {
+@Entity(name = "user")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
@@ -31,4 +31,5 @@ public class Users {
     @Column(name = "born_date")
     private Date bornDate;
 
+    //Todo datos relacionados:
 }

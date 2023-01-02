@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalTime;
+import java.util.List;
 
 @Data //lombok (para tener todos los getters y setters sin verlos)
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
-@Entity(name = "products")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
-public class Products {
+@Entity(name = "product")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
@@ -28,5 +29,8 @@ public class Products {
     @Column
     private String currency;
 
-
+    //Todo datos relacionados:
+    //@ManyToOne
+    //@JoinColumn(name = "list_id")
+   // private List<BuyList> buyList;
 }

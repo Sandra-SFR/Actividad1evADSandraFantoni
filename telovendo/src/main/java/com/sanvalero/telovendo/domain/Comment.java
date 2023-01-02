@@ -12,8 +12,8 @@ import java.util.Date;
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
-@Entity(name = "comments")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
-public class Comments {
+@Entity(name = "comment")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
@@ -28,5 +28,7 @@ public class Comments {
     private Date dateComment;
     @Column(name = "star_rate")
     private int starRate;
+
+    //Todo datos relacionados:
 
 }

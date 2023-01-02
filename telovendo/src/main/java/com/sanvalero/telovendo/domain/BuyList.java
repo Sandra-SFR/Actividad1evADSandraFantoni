@@ -3,17 +3,19 @@ package com.sanvalero.telovendo.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Data //lombok para tener todos los getters y setters sin verlos
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
-@Entity(name = "buy_lists")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
-public class BuyLists {
+@Entity(name = "buy_list")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
+public class BuyList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
@@ -27,5 +29,10 @@ public class BuyLists {
     @Column(name = "public_list")
     private boolean publicList;
     @Column(name = "create_date")
+    @CreatedDate
     private Date createDate;
+
+    //Todo datos relacionados:
+    //private List<Product> product;
+
 }

@@ -12,8 +12,8 @@ import java.time.LocalDate;
 @AllArgsConstructor //constructor con todos los argumentos
 @NoArgsConstructor  //constructor vacio
 
-@Entity(name = "discounts")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
-public class Discounts {
+@Entity(name = "discount")//javax.persistence para que entienda que a la bbdd le corresponde una tabla con estos datos
+public class Discount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
@@ -29,4 +29,5 @@ public class Discounts {
     @Column
     private boolean cumulative;
 
+    //Todo datos relacionados:
 }

@@ -1,4 +1,4 @@
 package com.sanvalero.telovendo.controller;
 
-public class DiscountsController {
+public class CommentController {
 }

@@ -3,5 +3,5 @@ package com.sanvalero.telovendo.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductsServiceImpl implements ProductsService{
+public class ProductServiceImpl implements ProductService {
 }
