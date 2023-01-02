@@ -1,6 +1,7 @@
 package com.sanvalero.telovendo.service;
 
 import com.sanvalero.telovendo.domain.BuyLists;
+import com.sanvalero.telovendo.exception.BuyListsNotFoundException;
 import com.sanvalero.telovendo.repository.BuyListsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +18,15 @@ public class BuyListsServiceImpl implements BuyListsService{
     public List<BuyLists> findAll(){
         return buyListsRepository.findAll();
     }
+
     @Override
-    public BuyLists findByCode(String code) {
-        return buyListsRepository.findByCode(code);
+    public BuyLists findById(long id) throws BuyListsNotFoundException {
+        return buyListsRepository.findById(id)
+                .orElseThrow(BuyListsNotFoundException::new);
+    }
+
+    @Override
+    public void addBuyLists(BuyLists buyLists){
+        buyListsRepository.save(buyLists);
     }
 }
