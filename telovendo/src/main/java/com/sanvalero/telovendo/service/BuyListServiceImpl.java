@@ -27,7 +27,7 @@ public class BuyListServiceImpl implements BuyListService {
 
     @Override
     public BuyList addBuyList(BuyList buyList){
-        return buyListRepository.save(buyList);
+       return buyListRepository.save(buyList);
     }
 
     @Override

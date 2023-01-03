@@ -1,5 +1,6 @@
 package com.sanvalero.telovendo.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,5 +33,7 @@ public class Product {
     //Todo datos relacionados:
     @ManyToOne
     @JoinColumn(name = "list_id")
+    @JsonBackReference(value = "list_buyList")
     private BuyList buyList;
+
 }

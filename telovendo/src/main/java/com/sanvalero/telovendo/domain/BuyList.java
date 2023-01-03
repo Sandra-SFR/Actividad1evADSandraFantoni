@@ -1,5 +1,6 @@
 package com.sanvalero.telovendo.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,6 @@ public class BuyList {
 
     //Todo datos relacionados:
     @OneToMany(mappedBy = "buyList")// se tiene que llamar como la variable de la otra clase
-    private List<Product> product;
+    private List<Product> products;
 
 }
