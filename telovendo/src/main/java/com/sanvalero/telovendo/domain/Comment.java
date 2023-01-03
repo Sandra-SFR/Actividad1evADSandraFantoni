@@ -18,6 +18,8 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
     private long id;
+    @Column
+    private String name;
     @Column(name = "comment_text")//columna de la tabla
     private String commentText;
     @Column(name = "buyer_name")//se cambia el nombre adecuandolo para bbdd
