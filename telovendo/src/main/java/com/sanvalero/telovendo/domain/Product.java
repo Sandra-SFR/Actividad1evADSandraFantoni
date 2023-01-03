@@ -30,7 +30,7 @@ public class Product {
     private String currency;
 
     //Todo datos relacionados:
-    //@ManyToOne
-    //@JoinColumn(name = "list_id")
-   // private List<BuyList> buyList;
+    @ManyToOne
+    @JoinColumn(name = "list_id")
+    private BuyList buyList;
 }

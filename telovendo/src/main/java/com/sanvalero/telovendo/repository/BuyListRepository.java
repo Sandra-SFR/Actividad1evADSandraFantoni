@@ -11,5 +11,5 @@ import java.util.List;
 public interface BuyListRepository extends CrudRepository<BuyList, Long> {
 
     List<BuyList> findAll();
-    BuyList findByCode(String code);
+    BuyList findByName(String name);
 }

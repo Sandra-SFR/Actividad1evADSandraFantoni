@@ -21,7 +21,7 @@ public class BuyList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//autoincremental
     private long id;
     @Column//columna de la tabla
-    private String code;
+    private String name;
     @Column
     private float total;
     @Column(name = "number_products")//se cambia el nombre adecuandolo para bbdd
@@ -33,6 +33,7 @@ public class BuyList {
     private Date createDate;
 
     //Todo datos relacionados:
-    //private List<Product> product;
+    @OneToMany(mappedBy = "buyList")// se tiene que llamar como la variable de la otra clase
+    private List<Product> product;
 
 }

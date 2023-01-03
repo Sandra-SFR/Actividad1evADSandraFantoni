@@ -41,8 +41,8 @@ public class BuyListServiceImpl implements BuyListService {
     public BuyList modifyBuyList(long id, BuyList newBuyList) throws BuyListNotFoundException {
         BuyList existingBuyList = buyListRepository.findById(id)
                 .orElseThrow(BuyListNotFoundException::new);
-        existingBuyList.setCode(newBuyList.getCode());
-        // Introducir todos los campos
+        existingBuyList.setName(newBuyList.getName());
+        // Introducir todos los campos que se quieran modificar
         return buyListRepository.save(existingBuyList);
     }
 }
