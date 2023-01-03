@@ -1,7 +1,6 @@
 package com.sanvalero.telovendo.repository;
 
 import com.sanvalero.telovendo.domain.BuyList;
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

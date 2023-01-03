@@ -1,7 +1,6 @@
 package com.sanvalero.telovendo.controller;
 
 import com.sanvalero.telovendo.domain.Comment;
-import com.sanvalero.telovendo.exception.BuyListNotFoundException;
 import com.sanvalero.telovendo.exception.CommentNotFoundException;
 import com.sanvalero.telovendo.exception.ErrorMessage;
 import com.sanvalero.telovendo.service.CommentService;
